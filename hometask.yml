@@ -17,14 +17,14 @@
       url: https://www.free-css.com/assets/files/free-css-templates/download/page265/sislaf.zip
       dest: /tmp
 
-  # - name: Cshell bullshit
-  #   shell: |
-  #     unzip /tmp/sislaf.zip
-  #     cd sislaf
-  #     mv * /var/www/html
+  - name: Cshell bullshit
+    shell: |
+      unzip /tmp/sislaf.zip
+      cd sislaf
+      mv * /var/www/html
 
 
-  #   ignore_errors: true
+    ignore_errors: true
  
    
   - name: Disable selinux
