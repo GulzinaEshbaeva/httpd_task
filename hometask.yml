@@ -12,22 +12,20 @@
       name: httpd 
       state: started
 
-  - name: Download template
+  - name: Download template to /tmp
     get_url:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page265/sislaf.zip
       dest: /tmp
 
-  - name: Cshell bullshit
+  - name: This will unzip, cd into the directory and then move the files from the current folder to /var/www/html
     shell: |
       unzip /tmp/sislaf.zip
       cd sislaf
       mv * /var/www/html
 
-
-    ignore_errors: true
- 
+    ignore_errors: true 
    
-  - name: Disable selinux
+  - name: Disable SElinux
     selinux:
       state: disabled
 
